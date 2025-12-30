@@ -1,20 +1,22 @@
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useState } from "react";
+import { Mail, Phone, MapPin, Send } from "lucide-react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -23,7 +25,7 @@ const Contact = () => {
     setIsSubmitted(true);
     setTimeout(() => {
       setIsSubmitted(false);
-      setFormData({ name: '', email: '', phone: '', message: '' });
+      setFormData({ name: "", email: "", phone: "", message: "" });
     }, 3000);
   };
 
@@ -36,14 +38,17 @@ const Contact = () => {
           </h2>
           <div className="w-20 h-1 bg-white mx-auto mb-6"></div>
           <p className="text-gray-300 text-lg max-w-2xl mx-auto">
-            Ready to capture your special moments? Contact us today to book your session
+            Ready to capture your special moments? Contact us today to book your
+            session
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div>
             <div className="bg-gray-800 p-8 rounded-lg mb-8">
-              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">
+                Contact Information
+              </h3>
 
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -62,7 +67,7 @@ const Contact = () => {
                       href="tel:+919876543210"
                       className="text-gray-400 hover:text-white transition-colors"
                     >
-                      +91 98765 43210
+                      +91 XXXXXXXXXX
                     </a>
                   </div>
                 </div>
@@ -75,7 +80,7 @@ const Contact = () => {
                       href="mailto:info@khalsastudio.com"
                       className="text-gray-400 hover:text-white transition-colors"
                     >
-                      info@khalsastudio.com
+                      info@demostudio.com
                     </a>
                   </div>
                 </div>
@@ -94,7 +99,9 @@ const Contact = () => {
           </div>
 
           <div className="bg-gray-800 p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-white mb-6">Send Us a Message</h3>
+            <h3 className="text-2xl font-bold text-white mb-6">
+              Send Us a Message
+            </h3>
 
             {isSubmitted && (
               <div className="bg-green-500/20 border border-green-500 text-green-400 p-4 rounded-lg mb-6">
@@ -104,7 +111,10 @@ const Contact = () => {
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-white mb-2 font-medium">
+                <label
+                  htmlFor="name"
+                  className="block text-white mb-2 font-medium"
+                >
                   Name *
                 </label>
                 <input
@@ -120,7 +130,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-white mb-2 font-medium">
+                <label
+                  htmlFor="email"
+                  className="block text-white mb-2 font-medium"
+                >
                   Email *
                 </label>
                 <input
@@ -136,7 +149,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-white mb-2 font-medium">
+                <label
+                  htmlFor="phone"
+                  className="block text-white mb-2 font-medium"
+                >
                   Phone *
                 </label>
                 <input
@@ -152,7 +168,10 @@ const Contact = () => {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-white mb-2 font-medium">
+                <label
+                  htmlFor="message"
+                  className="block text-white mb-2 font-medium"
+                >
                   Message *
                 </label>
                 <textarea

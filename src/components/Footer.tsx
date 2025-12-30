@@ -20,8 +20,8 @@ const Footer = () => {
               Capturing Your Moments with Art & Passion
             </p>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Professional photography services in Delhi. Specializing
-              in weddings, events, portraits, and family photography.
+              Professional photography services in Delhi. Specializing in
+              weddings, events, portraits, and family photography.
             </p>
           </div>
 
@@ -84,7 +84,7 @@ const Footer = () => {
                   href="tel:+919876543210"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  +91 98765 43210
+                  +91 XXXXXXXXXX
                 </a>
               </li>
               <li className="flex items-start">
@@ -93,7 +93,7 @@ const Footer = () => {
                   href="mailto:info@khalsastudio.com"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  info@khalsastudio.com
+                  info@demostudio.com
                 </a>
               </li>
             </ul>
